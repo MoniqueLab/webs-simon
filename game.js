@@ -20,7 +20,7 @@ var level = 0;
         });
 
 
-    $(".btn").on("click touchstart", function() {
+    $(".btn").click(function() {
         var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
         
