@@ -10,7 +10,7 @@ var level = 0;
 
     $(document).ready(function() {
 
-        $(document).on("keydown touchscreen" ,function() {
+        $(document).on("keydown touchstart" ,function() {
 
         if (!started){
             $("#level-title").text("Level " + level);
@@ -20,7 +20,7 @@ var level = 0;
         });
 
 
-    $(".btn").on("click touchscreen", function() {
+    $(".btn").on("click touchstart", function() {
         var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
         
@@ -104,5 +104,3 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
-
-
