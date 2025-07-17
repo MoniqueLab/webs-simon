@@ -10,7 +10,7 @@ var level = 0;
 
     $(document).ready(function() {
 
-        $(document).keydown(function() {
+        $(document).on("keydown touchscreen" ,function() {
 
         if (!started){
             $("#level-title").text("Level " + level);
@@ -104,4 +104,5 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
+
 
