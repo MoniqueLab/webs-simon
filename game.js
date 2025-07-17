@@ -20,10 +20,19 @@ var level = 0;
         });
 
 
-    $(".btn").click(function() {
+    $(".btn").on("click touchstart",function(event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+              if (event.type === "touchstart" && event.originalEvent.touches.length > 1) {
+        return;
+              }
+
+
         var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
-        
+           
 
         playSound(userChosenColour);
 
@@ -104,3 +113,4 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
+
