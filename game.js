@@ -20,7 +20,7 @@ var level = 0;
         });
 
 
-    $(".btn").click(function() {
+    $(".btn").on("click touchscreen", function() {
         var userChosenColour = $(this).attr("id");
         userClickedPattern.push(userChosenColour);
         
@@ -104,3 +104,4 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
+
